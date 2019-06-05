@@ -74,6 +74,36 @@ class Person
         "♪ another one bites the dust ♫"
     end
 
+    def call_friend(friend)
+        happy = @happiness + 3
+        friend_happiness = friend.happiness + 3
+
+        self.happiness=(happy)
+        friend.happiness=(friend_happiness)
+
+        "Hi #{friend.name}! It's #{@name}. How are you?"
+    end
+
+    def start_conversation(peep, topic)
+        if topic == "politics"
+        happy = @happiness - 2
+        peep_happiness = peep.happiness - 2
+
+        self.happiness=(happy)
+        peep.happiness=(peep_happiness)
+            return "blah blah partisan blah lobbyist" 
+        elsif topic == "weather"
+            happy = @happiness + 1
+            peep_happiness = peep.happiness + 1
+    
+            self.happiness=(happy)
+            peep.happiness=(peep_happiness)
+
+            return "blah blah sun blah rain"
+        else
+            return "blah blah blah blah blah"
+        end
+    end
 
 
 end
