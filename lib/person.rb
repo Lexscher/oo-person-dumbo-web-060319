@@ -26,6 +26,7 @@ class Person
     end
 
     def hygiene=(index)
+        
         if index > 10 
             @hygiene = 10
         elsif index < 0
@@ -54,6 +55,14 @@ class Person
     def get_paid(salary)
         @bank_account += salary
         "all about the benjamins"
+    end
+
+    def take_bath
+        num = @hygiene + 4
+
+        self.hygiene=(num)
+        
+        "♪ Rub-a-dub just relaxing in the tub ♫"
     end
 
 
