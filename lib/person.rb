@@ -2,12 +2,13 @@ require "pry"
 
 class Person
 
-    attr_reader :name, :bank_account, :happiness
+    attr_reader :name, :bank_account, :happiness, :hygiene
 
     def initialize(name)
         @name = name
         @bank_account = 25
         @happiness = 8
+        @hygiene = 8
     end
 
     def bank_account=(amount)
@@ -15,7 +16,6 @@ class Person
     end
 
     def happiness=(index)
-        # binding.pry
         if index > 10 
             @happiness = 10
         elsif index < 0
@@ -24,4 +24,33 @@ class Person
             @happiness = index
         end
     end
+
+    def hygiene=(index)
+        if index > 10 
+            @hygiene = 10
+        elsif index < 0
+            @hygiene = 0
+        else
+            @hygiene = index
+        end
+    end
+
+    def happy?
+        if @happiness > 7
+            return true
+        end
+
+        false
+    end
+
+    def clean?
+        if @hygiene > 7
+            return true
+        end
+
+        false
+    end
+
+
+
 end
