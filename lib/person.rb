@@ -65,6 +65,15 @@ class Person
         "♪ Rub-a-dub just relaxing in the tub ♫"
     end
 
+    def work_out
+        happy = @happiness + 2
+        dirty = @hygiene - 3
+
+        self.happiness=(happy)
+        self.hygiene=(dirty)
+        "♪ another one bites the dust ♫"
+    end
+
 
 
 end
